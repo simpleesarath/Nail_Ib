@@ -23,7 +23,7 @@ It provides users with an investment-desk workspace to manage portfolios, view m
    npm install
 4. To run the application:
    npx run dev
-5. click on that link appeared in the terminal or directly open https:localhost://3000
+5. click on that link appeared in the terminal or directly open http:localhost://3000
 here is the folder structure 
 ├── app/
 │   ├── (auth)/
