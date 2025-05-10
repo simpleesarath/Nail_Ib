@@ -24,90 +24,94 @@ It provides users with an investment-desk workspace to manage portfolios, view m
 4. To run the application:
    npx run dev
 5. click on that link appeared in the terminal or directly open http:localhost://3000
-here is the folder structure 
-├── app/
-│   ├── (auth)/
-│   │   └── auth/
-│   │       ├── login/
-│   │       │   └── page.tsx
-│   │       └── register/
-│   │           └── page.tsx
-│   ├── (dashboard)/
-│   │   ├── dashboard/
-│   │   │   └── page.tsx
-│   │   ├── markets/
-│   │   │   └── page.tsx
-│   │   ├── portfolio/
-│   │   │   └── page.tsx
-│   │   └── layout.tsx
-│   ├── (landing)/
-│   │   └── page.tsx
-│   ├── demo/
-│   │   └── page.tsx
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── providers.tsx
-├── components/
-│   ├── layout/
-│   │   ├── dashboard-header.tsx
-│   │   └── navigation.tsx
-│   └── ui/
-│       ├── accordion.tsx
-│       ├── alert-dialog.tsx
-│       ├── alert.tsx
-│       ├── aspect-ratio.tsx
-│       ├── avatar.tsx
-│       ├── badge.tsx
-│       ├── breadcrumb.tsx
-│       ├── button.tsx
-│       ├── calendar.tsx
-│       ├── card.tsx
-│       ├── carousel.tsx
-│       ├── chart.tsx
-│       ├── checkbox.tsx
-│       ├── collapsible.tsx
-│       ├── command.tsx
-│       ├── context-menu.tsx
-│       ├── dialog.tsx
-│       ├── drawer.tsx
-│       ├── dropdown-menu.tsx
-│       ├── form.tsx
-│       ├── hover-card.tsx
-│       ├── input-otp.tsx
-│       ├── input.tsx
-│       ├── label.tsx
-│       ├── menubar.tsx
-│       ├── navigation-menu.tsx
-│       ├── pagination.tsx
-│       ├── popover.tsx
-│       ├── progress.tsx
-│       ├── radio-group.tsx
-│       ├── resizable.tsx
-│       ├── scroll-area.tsx
-│       ├── separator.tsx
-│       ├── sheet.tsx
-│       ├── skeleton.tsx
-│       ├── slider.tsx
-│       ├── sonner.tsx
-│       ├── switch.tsx
-│       ├── table.tsx
-│       ├── tabs.tsx
-│       ├── textarea.tsx
-│       ├── theme-toggle.tsx
-│       ├── toast.tsx
-│       ├── toaster.tsx
-│       ├── toggle-group.tsx
-│       ├── toggle.tsx
-│       └── tooltip.tsx
-├── hooks/
-│   └── use-toast.ts
-├── lib/
-│   └── utils.ts
-├── .eslintrc.json
-├── .gitignore
-├── components.json
-├── next.config.js
-├── package.json
-├── postcss.config.js
-├── tailwind.config.ts
-└── tsconfig.json
+<hr>
+here is the folder structure <br/>
+<div>
+   ├── app/ <br/>
+│   ├── (auth)/ <br/>
+│   │   └── auth/ <br/>
+│   │       ├── login/ <br/>
+│   │       │   └── page.tsx <br/>
+│   │       └── register/ <br/>
+│   │           └── page.tsx <br/>
+│   ├── (dashboard)/ <br/>
+│   │   ├── dashboard/ <br/>
+│   │   │   └── page.tsx  <br/>
+│   │   ├── markets/  <br/> 
+│   │   │   └── page.tsx  <br/>
+│   │   ├── portfolio/  <br/>
+│   │   │   └── page.tsx  <br/>
+│   │   └── layout.tsx  <br/>
+│   ├── (landing)/ <br/>
+│   │   └── page.tsx <br/>
+│   ├── demo/ <br/>
+│   │   └── page.tsx  <br/>
+│   ├── globals.css  <br/>
+│   ├── layout.tsx  <br/>
+│   └── providers.tsx  <br/>
+├── components/  <br/>
+│   ├── layout/  <br/>
+│   │   ├── dashboard-header.tsx <br/>
+│   │   └── navigation.tsx <br/>
+│   └── ui/ <br/>
+│       ├── accordion.tsx <br/>
+│       ├── alert-dialog.tsx <br/> 
+│       ├── alert.tsx <br/>
+│       ├── aspect-ratio.tsx <br/>
+│       ├── avatar.tsx <br/>
+│       ├── badge.tsx <br/>
+│       ├── breadcrumb.tsx <br/>
+│       ├── button.tsx <br/>
+│       ├── calendar.tsx <br/>
+│       ├── card.tsx <br/>
+│       ├── carousel.tsx <br/>
+│       ├── chart.tsx <br/>
+│       ├── checkbox.tsx <br/>
+│       ├── collapsible.tsx <br/>
+│       ├── command.tsx <br/>
+│       ├── context-menu.tsx <br/>
+│       ├── dialog.tsx <br/>
+│       ├── drawer.tsx <br/>
+│       ├── dropdown-menu.tsx <br/>
+│       ├── form.tsx <br/>
+│       ├── hover-card.tsx <br/>
+│       ├── input-otp.tsx <br/>
+│       ├── input.tsx <br/>
+│       ├── label.tsx <br/>
+│       ├── menubar.tsx <br/>
+│       ├── navigation-menu.tsx <br/>
+│       ├── pagination.tsx <br/>
+│       ├── popover.tsx <br/>
+│       ├── progress.tsx <br/>
+│       ├── radio-group.tsx <br/>
+│       ├── resizable.tsx <br/>
+│       ├── scroll-area.tsx <br/>
+│       ├── separator.tsx <br/>
+│       ├── sheet.tsx <br/>
+│       ├── skeleton.tsx <br/>
+│       ├── slider.tsx <br/>
+│       ├── sonner.tsx <br/>
+│       ├── switch.tsx <br/>
+│       ├── table.tsx <br/>
+│       ├── tabs.tsx <br/>
+│       ├── textarea.tsx <br/>
+│       ├── theme-toggle.tsx <br/>
+│       ├── toast.tsx <br/>
+│       ├── toaster.tsx <br/>
+│       ├── toggle-group.tsx <br/>
+│       ├── toggle.tsx <br/>
+│       └── tooltip.tsx <br/>
+├── hooks/ <br/>
+│   └── use-toast.ts <br/>
+├── lib/ <br/>
+│   └── utils.ts <br/>
+├── .eslintrc.json <br/>
+├── .gitignore <br/>
+├── components.json <br/>
+├── next.config.js <br/>
+├── package.json <br/>
+├── postcss.config.js <br/>
+├── tailwind.config.ts <br/>
+└── tsconfig.json <br/>
+
+</div>
