@@ -12,6 +12,9 @@
 /.next/
 /out/
 build
+# .gitignore
+.next/*
+!.next/cache/
 
 .turbo
 .cache

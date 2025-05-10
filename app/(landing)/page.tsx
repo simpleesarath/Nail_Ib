@@ -16,46 +16,63 @@ export default function LandingPage() {
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    
-    tl.fromTo(headerRef.current, 
-      { y: -100, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 1 }
-    );
-    
-    tl.fromTo(titleRef.current, 
-      { y: 50, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 1 }, 
-      "-=0.5"
-    );
-    
-    tl.fromTo(subtitleRef.current, 
-      { y: 50, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 1 }, 
-      "-=0.7"
-    );
-    
-    tl.fromTo(ctaRef.current, 
-      { y: 50, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 1 }, 
-      "-=0.7"
-    );
-    
-    tl.fromTo(featuresRef.current?.querySelectorAll('.feature-card'), 
-      { y: 50, opacity: 0 }, 
-      { y: 0, opacity: 1, stagger: 0.2, duration: 0.8 }, 
-      "-=0.5"
-    );
-    
-    // Floating animation for cards
-    gsap.to('.feature-card', {
-      y: '-10px',
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power1.inOut',
-      stagger: 0.1
-    });
-    
+
+    if (headerRef.current) {
+      tl.fromTo(
+        headerRef.current,
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 }
+      );
+    }
+
+    if (titleRef.current) {
+      tl.fromTo(
+        titleRef.current,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '-=0.5'
+      );
+    }
+
+    if (subtitleRef.current) {
+      tl.fromTo(
+        subtitleRef.current,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '-=0.7'
+      );
+    }
+
+    if (ctaRef.current) {
+      tl.fromTo(
+        ctaRef.current,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '-=0.7'
+      );
+    }
+
+    const featureCards = featuresRef.current?.querySelectorAll('.feature-card');
+    if (featureCards && featureCards.length > 0) {
+      tl.fromTo(
+        featureCards,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.2, duration: 0.8 },
+        '-=0.5'
+      );
+    }
+
+    const cards = document.querySelectorAll('.feature-card');
+    if (cards.length > 0) {
+      gsap.to(cards, {
+        y: '-10px',
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut',
+        stagger: 0.1,
+      });
+    }
   }, []);
 
   return (
@@ -114,7 +131,7 @@ export default function LandingPage() {
                   Streaming quotes from Polygon.io and Coinbase WebSocket APIs for instant decision-making.
                 </p>
               </div>
-              
+
               <div className="feature-card bg-card p-8 rounded-xl shadow-lg border border-border">
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <Lock className="h-6 w-6 text-primary" />
@@ -124,7 +141,7 @@ export default function LandingPage() {
                   Complete isolation between trading desks with row-level security and advanced access controls.
                 </p>
               </div>
-              
+
               <div className="feature-card bg-card p-8 rounded-xl shadow-lg border border-border">
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <RefreshCw className="h-6 w-6 text-primary" />
@@ -134,7 +151,7 @@ export default function LandingPage() {
                   Continue working seamlessly during connectivity issues with intelligent transaction queuing.
                 </p>
               </div>
-              
+
               <div className="feature-card bg-card p-8 rounded-xl shadow-lg border border-border">
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <LineChart className="h-6 w-6 text-primary" />
@@ -144,7 +161,7 @@ export default function LandingPage() {
                   Real-time VaR calculations and risk exposure analysis with automated updates.
                 </p>
               </div>
-              
+
               <div className="feature-card bg-card p-8 rounded-xl shadow-lg border border-border">
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <TrendingUp className="h-6 w-6 text-primary" />
@@ -154,7 +171,7 @@ export default function LandingPage() {
                   Real-time collaborative trade ticket editing with conflict resolution and remote cursors.
                 </p>
               </div>
-              
+
               <div className="feature-card bg-card p-8 rounded-xl shadow-lg border border-border">
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <ArrowRight className="h-6 w-6 text-primary" />

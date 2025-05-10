@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx update-browserslist-db@latest && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npx update-browserslist-db@latest"
+  
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
